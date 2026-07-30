@@ -70,6 +70,36 @@ export default async function LessonPage({ params }: Props) {
         <h1 className="section__title">{lesson.title}</h1>
         <p className="section__desc">{lesson.summary}</p>
 
+        {lesson.sourceUrl ? (
+          <div className="panel textbook-panel" style={{ marginBottom: "1.5rem" }}>
+            <h2 className="tile__title">人教版电子教材</h2>
+            <p className="tile__meta" style={{ marginBottom: "1rem" }}>
+              内容来自开源仓库 {lesson.sourceRepo ?? "ChinaTextbook"}
+              {lesson.sourcePath ? ` · ${lesson.sourcePath}` : ""}
+            </p>
+            <div className="hero__actions">
+              <a
+                className="btn btn-primary"
+                href={lesson.sourceUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                在 GitHub 打开 PDF
+              </a>
+              {lesson.sourceRawUrl ? (
+                <a
+                  className="btn btn-ghost"
+                  href={lesson.sourceRawUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  下载 / 直链预览
+                </a>
+              ) : null}
+            </div>
+          </div>
+        ) : null}
+
         {progress?.status === "completed" ? (
           <p className="success" style={{ marginBottom: "1.25rem" }}>
             你已完成本课，得分 {progress.score ?? 0} 分。可再次练习刷新成绩。
@@ -91,7 +121,7 @@ export default async function LessonPage({ params }: Props) {
         </div>
 
         <div className="panel">
-          <h2 className="tile__title">随堂练习</h2>
+          <h2 className="tile__title">导学自测</h2>
           <PracticeForm
             lessonId={lesson.id}
             questions={lesson.questions.map((q) => ({

@@ -9,7 +9,7 @@ export default function HomePage() {
           <p className="hero__brand">课径</p>
           <h1 className="hero__headline">人教版小学到初中，一条清晰的学习路径</h1>
           <p className="hero__lead">
-            按年级与科目同步导学，配合随堂练习与云端进度，把每天的课业走稳。
+            教材 PDF 来自 ChinaTextbook 开源库，按年级与科目整理人教/统编目录，配合导学自测与云端进度。
           </p>
           <div className="hero__actions">
             <Link className="btn btn-primary" href="/primary">
@@ -30,12 +30,12 @@ export default function HomePage() {
           </p>
           <div className="subject-grid">
             <div className="tile">
-              <h3 className="tile__title">对齐人教版结构</h3>
-              <p className="tile__meta">小学 1–6、初中 7–9，科目入口齐全</p>
+              <h3 className="tile__title">ChinaTextbook 教材</h3>
+              <p className="tile__meta">对接人教/统编 PDF，一键打开电子课本</p>
             </div>
             <div className="tile">
-              <h3 className="tile__title">导学 + 练习</h3>
-              <p className="tile__meta">原创要点梳理与即时判分，不照搬课文</p>
+              <h3 className="tile__title">导学 + 自测</h3>
+              <p className="tile__meta">阅读建议与即时判分，辅助自学节奏</p>
             </div>
             <div className="tile">
               <h3 className="tile__title">云端进度</h3>

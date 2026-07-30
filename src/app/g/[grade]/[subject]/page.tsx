@@ -45,25 +45,33 @@ export default async function SubjectPage({ params }: Props) {
         <h1 className="section__title">
           {gradeLabel(grade)} · {subject.name}
         </h1>
-        <p className="section__desc">选择单元进入课时导学与练习。</p>
+        <p className="section__desc">
+          人教/统编电子教材按上册、下册排列，点击进入可打开 ChinaTextbook 仓库中的 PDF。
+        </p>
 
         <div className="unit-list">
-          {subject.units.map((unit) => (
-            <div key={unit.id} className="panel">
-              <h2 className="tile__title">{unit.title}</h2>
-              <div>
-                {unit.lessons.map((lesson) => (
-                  <Link key={lesson.id} href={`/lesson/${lesson.id}`} className="lesson-link">
-                    <div>
-                      <strong>{lesson.title}</strong>
-                      <p className="tile__meta">{lesson.summary}</p>
-                    </div>
-                    <span className="muted">开始学习 →</span>
-                  </Link>
-                ))}
+          {subject.units.length === 0 ? (
+            <div className="panel">该科目暂未匹配到教材 PDF，请稍后通过目录刷新脚本更新。</div>
+          ) : (
+            subject.units.map((unit) => (
+              <div key={unit.id} className="panel">
+                <h2 className="tile__title">{unit.title}</h2>
+                <div>
+                  {unit.lessons.map((lesson) => (
+                    <Link key={lesson.id} href={`/lesson/${lesson.id}`} className="lesson-link">
+                      <div>
+                        <strong>{lesson.title}</strong>
+                        <p className="tile__meta">{lesson.summary}</p>
+                      </div>
+                      <span className="muted">
+                        {lesson.sourceUrl ? "打开教材 →" : "开始学习 →"}
+                      </span>
+                    </Link>
+                  ))}
+                </div>
               </div>
-            </div>
-          ))}
+            ))
+          )}
         </div>
       </div>
     </section>

@@ -44,7 +44,16 @@ export default async function RootLayout({
         <main>{children}</main>
         <footer className="site-footer">
           <div className="container">
-            课径 · 人教版同步导学与练习。内容为原创学习指引，不收录教材原文。
+            课径 · 人教版同步学习。电子教材 PDF 来自
+            <a
+              href="https://github.com/Zhoushaohua12/ChinaTextbook"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ marginLeft: "0.35rem", color: "var(--bamboo)" }}
+            >
+              ChinaTextbook
+            </a>
+            ，请依法合规使用。
           </div>
         </footer>
       </body>

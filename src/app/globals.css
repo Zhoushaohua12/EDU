@@ -413,6 +413,12 @@ img {
   background: rgba(255, 255, 255, 0.35);
 }
 
+.textbook-panel {
+  background:
+    linear-gradient(135deg, rgba(47, 122, 91, 0.12), rgba(243, 239, 230, 0.85)),
+    rgba(243, 239, 230, 0.72);
+}
+
 .site-footer {
   padding: 2.5rem 0 3rem;
   border-top: 1px solid var(--line);

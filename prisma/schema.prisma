@@ -59,15 +59,19 @@ model Unit {
 }
 
 model Lesson {
-  id        String     @id @default(cuid())
-  unitId    String
-  unit      Unit       @relation(fields: [unitId], references: [id], onDelete: Cascade)
-  title     String
-  summary   String
-  guide     String
-  sortOrder Int        @default(0)
-  questions Question[]
-  progress  Progress[]
+  id          String     @id @default(cuid())
+  unitId      String
+  unit        Unit       @relation(fields: [unitId], references: [id], onDelete: Cascade)
+  title       String
+  summary     String
+  guide       String
+  sourceUrl   String?
+  sourceRawUrl String?
+  sourcePath  String?
+  sourceRepo  String?
+  sortOrder   Int        @default(0)
+  questions   Question[]
+  progress    Progress[]
 }
 
 model Question {

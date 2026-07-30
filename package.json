@@ -11,6 +11,7 @@
     "db:migrate": "prisma migrate dev",
     "db:seed": "tsx prisma/seed.ts",
     "db:reset": "prisma migrate reset --force",
+    "catalog:build": "node scripts/build-textbook-catalog.mjs",
     "postinstall": "prisma generate"
   },
   "prisma": {
