@@ -56,6 +56,10 @@ export async function createQuestionAction(lessonId: string, formData: FormData)
     redirect(`/admin/lessons/${lessonId}?error=` + encodeURIComponent("题目字段不完整"));
   }
 
+  if (type !== "single" && type !== "fill" && type !== "judge") {
+    redirect(`/admin/lessons/${lessonId}?error=` + encodeURIComponent("题型无效"));
+  }
+
   let options: string | null = null;
   if (type === "single") {
     const list = optionsRaw
@@ -66,6 +70,8 @@ export async function createQuestionAction(lessonId: string, formData: FormData)
       redirect(`/admin/lessons/${lessonId}?error=` + encodeURIComponent("单选题至少 2 个选项"));
     }
     options = JSON.stringify(list);
+  } else if (type === "judge") {
+    options = JSON.stringify(["正确", "错误"]);
   }
 
   const maxSort = await prisma.question.aggregate({
@@ -76,7 +82,7 @@ export async function createQuestionAction(lessonId: string, formData: FormData)
   await prisma.question.create({
     data: {
       lessonId,
-      type: type === "fill" ? "fill" : "single",
+      type,
       prompt,
       options,
       answer,

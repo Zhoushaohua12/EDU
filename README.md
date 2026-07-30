@@ -7,7 +7,8 @@
 - 首页品牌落地 + 小学 / 初中入口
 - 年级 → 科目 → 上/下册教材 → 课时页
 - 一键打开 / 下载 ChinaTextbook 中的人教、统编 PDF
-- 导学自测（单选）与学习进度（`/me`）
+- 按 PDF 目录/课标章节生成的题库（单选、判断、填空）
+- 导学自测与学习进度（`/me`）
 - 管理员后台增改课时与题目（`/admin`）
 
 ## 技术栈
@@ -35,7 +36,8 @@ npm run dev
 
 ```bash
 npm run catalog:build   # 从 GitHub API 重建 data/textbooks.json
-npm run db:seed         # 按新目录重写课时与 PDF 链接
+npm run bank:build      # 根据章节主题生成 data/question-bank.json
+npm run db:seed         # 按目录与题库重写课时
 ```
 
 ## 默认账号
@@ -68,4 +70,5 @@ npm run db:reset       # 重置数据库并种子
 - 目录优先收录人教版 / 统编版 PDF（小学语数英道法科美音体；初中语数英物化生史地道法）。
 - 英语小学：1–2 年级用人教一年级起点，3–6 年级优先 PEP 三年级起点。
 - 音乐优先简谱版。
-- PDF 文件仍托管在 ChinaTextbook 仓库，本站保存导航链接与导学，不镜像整库大文件。
+- 题库依据 PDF 目录与人教版课标知识点**原创生成**（单选/判断/填空），不照搬课文原文。
+- PDF 文件仍托管在 ChinaTextbook 仓库，本站保存导航链接与练习，不镜像整库大文件。

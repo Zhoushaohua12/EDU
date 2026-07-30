@@ -121,14 +121,18 @@ export default async function LessonPage({ params }: Props) {
         </div>
 
         <div className="panel">
-          <h2 className="tile__title">导学自测</h2>
+          <h2 className="tile__title">章节题库</h2>
           <PracticeForm
             lessonId={lesson.id}
             questions={lesson.questions.map((q) => ({
               id: q.id,
               type: q.type,
               prompt: q.prompt,
-              options: q.options ? (JSON.parse(q.options) as string[]) : [],
+              options: q.options
+                ? (JSON.parse(q.options) as string[])
+                : q.type === "judge"
+                  ? ["正确", "错误"]
+                  : [],
             }))}
           />
         </div>

@@ -20,6 +20,7 @@ enum Stage {
 enum QuestionType {
   single
   fill
+  judge
 }
 
 enum ProgressStatus {

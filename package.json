@@ -12,6 +12,7 @@
     "db:seed": "tsx prisma/seed.ts",
     "db:reset": "prisma migrate reset --force",
     "catalog:build": "node scripts/build-textbook-catalog.mjs",
+    "bank:build": "node scripts/generate-question-bank.mjs",
     "postinstall": "prisma generate"
   },
   "prisma": {

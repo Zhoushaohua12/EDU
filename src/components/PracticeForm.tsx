@@ -5,7 +5,7 @@ import { submitPracticeAction } from "@/app/actions/progress";
 
 type Question = {
   id: string;
-  type: "single" | "fill";
+  type: "single" | "fill" | "judge";
   prompt: string;
   options: string[];
 };
@@ -51,17 +51,23 @@ export function PracticeForm({
         <div key={q.id} className="question">
           <p>
             <strong>
-              {index + 1}. {q.prompt}
+              {index + 1}.{" "}
+              <span className="muted" style={{ fontWeight: 500 }}>
+                [{q.type === "single" ? "单选" : q.type === "judge" ? "判断" : "填空"}]
+              </span>{" "}
+              {q.prompt}
             </strong>
           </p>
-          {q.type === "single" ? (
+          {q.type === "single" || q.type === "judge" ? (
             <div className="options">
-              {q.options.map((opt) => (
-                <label key={opt}>
-                  <input type="radio" name={q.id} value={opt} required />
-                  <span>{opt}</span>
-                </label>
-              ))}
+              {(q.type === "judge" ? q.options.length ? q.options : ["正确", "错误"] : q.options).map(
+                (opt) => (
+                  <label key={opt}>
+                    <input type="radio" name={q.id} value={opt} required />
+                    <span>{opt}</span>
+                  </label>
+                ),
+              )}
             </div>
           ) : (
             <input
@@ -80,7 +86,12 @@ export function PracticeForm({
             />
           )}
           {result ? (
-            <p className={result.details.find((d) => d.questionId === q.id)?.correct ? "success" : "alert"} style={{ marginTop: "0.7rem" }}>
+            <p
+              className={
+                result.details.find((d) => d.questionId === q.id)?.correct ? "success" : "alert"
+              }
+              style={{ marginTop: "0.7rem" }}
+            >
               {result.details.find((d) => d.questionId === q.id)?.correct
                 ? "回答正确"
                 : `参考答案：${result.details.find((d) => d.questionId === q.id)?.expected}`}

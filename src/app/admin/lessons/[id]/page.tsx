@@ -95,7 +95,7 @@ export default async function AdminLessonPage({ params, searchParams }: Props) {
                 {lesson.questions.map((q) => (
                   <tr key={q.id}>
                     <td>{q.prompt}</td>
-                    <td>{q.type === "single" ? "单选" : "填空"}</td>
+                    <td>{q.type === "single" ? "单选" : q.type === "judge" ? "判断" : "填空"}</td>
                     <td>{q.answer}</td>
                     <td>
                       <form action={deleteQuestionAction.bind(null, q.id, lesson.id)}>
@@ -123,6 +123,7 @@ export default async function AdminLessonPage({ params, searchParams }: Props) {
               <select name="type" defaultValue="single">
                 <option value="single">单选</option>
                 <option value="fill">填空</option>
+                <option value="judge">判断</option>
               </select>
             </label>
             <label>

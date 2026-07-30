@@ -46,7 +46,7 @@ export default async function SubjectPage({ params }: Props) {
           {gradeLabel(grade)} · {subject.name}
         </h1>
         <p className="section__desc">
-          人教/统编电子教材按上册、下册排列，点击进入可打开 ChinaTextbook 仓库中的 PDF。
+          人教/统编电子教材按上册、下册排列；每册含教材入口与依据章节生成的题库练习。
         </p>
 
         <div className="unit-list">

@@ -9,7 +9,6 @@ import {
   MIDDLE_SUBJECTS,
   PRIMARY_GRADES,
   PRIMARY_SUBJECTS,
-  gradeLabel,
   subjectAllowed,
 } from "../src/lib/curriculum";
 
@@ -32,54 +31,36 @@ type CatalogBook = {
   sourceRepo: string;
 };
 
-type Catalog = {
-  source: string;
-  books: CatalogBook[];
+type Catalog = { source: string; books: CatalogBook[] };
+
+type BankQuestion = {
+  type: "single" | "fill" | "judge";
+  prompt: string;
+  answer: string;
+  explanation: string;
+  options?: string[];
+};
+
+type BankBook = {
+  title: string;
+  topics: string[];
+  questions: BankQuestion[];
 };
 
 function loadCatalog(): Catalog {
-  const file = path.resolve(process.cwd(), "data/textbooks.json");
-  return JSON.parse(fs.readFileSync(file, "utf8")) as Catalog;
+  return JSON.parse(fs.readFileSync(path.resolve("data/textbooks.json"), "utf8")) as Catalog;
 }
 
-function practiceFor(subjectSlug: string, grade: number, termLabel: string) {
-  const common = [
-    {
-      type: "single" as const,
-      prompt: `学习${gradeLabel(grade)}${termLabel}时，更有效的预习方式是？`,
-      options: ["只看答案不看教材", "先通读目录再标出疑难点", "完全不打开课本", "只抄封面信息"],
-      answer: "先通读目录再标出疑难点",
-      explanation: "带着问题阅读教材，听课与自学效率更高。",
-    },
-  ];
+function loadTopics() {
+  return JSON.parse(fs.readFileSync(path.resolve("data/topics.json"), "utf8")) as {
+    topics: Record<string, string[]>;
+  };
+}
 
-  if (subjectSlug === "math") {
-    common.push({
-      type: "single" as const,
-      prompt: "做数学习题时，发现不会的题应优先？",
-      options: ["直接跳过以后也不看", "先回顾课本例题再尝试", "只记最终答案", "放弃本单元"],
-      answer: "先回顾课本例题再尝试",
-      explanation: "例题承载了本课核心方法，是解题的第一依据。",
-    });
-  } else if (subjectSlug === "chinese") {
-    common.push({
-      type: "single" as const,
-      prompt: "语文阅读时，抓住段意较稳妥的做法是？",
-      options: ["只抄一句原话", "找出陈述对象及其行为/特征", "只看插图", "只背生字表"],
-      answer: "找出陈述对象及其行为/特征",
-      explanation: "对象 + 行为/特征，概括更完整。",
-    });
-  } else if (subjectSlug === "english") {
-    common.push({
-      type: "single" as const,
-      prompt: "英语单词记忆较有效的方法是？",
-      options: ["只看中文不读音", "结合课文语境朗读拼写", "只抄一遍立刻丢掉", "只用拼音代替"],
-      answer: "结合课文语境朗读拼写",
-      explanation: "音、形、义结合，并放回语境中记忆更牢固。",
-    });
-  }
-
-  return common;
+function loadBank() {
+  return JSON.parse(fs.readFileSync(path.resolve("data/question-bank.json"), "utf8")) as {
+    books: Record<string, BankBook>;
+  };
 }
 
 function buildGuide(book: CatalogBook, source: string) {
@@ -93,12 +74,37 @@ function buildGuide(book: CatalogBook, source: string) {
     ``,
     `## 学习建议`,
     `1. 先浏览目录，明确本册章节安排。`,
-    `2. 按单元精读正文与例题/课文，标记不懂处。`,
-    `3. 完成课后练习后，回到本页提交导学自测。`,
+    `2. 按下方章节课时逐课练习（单选 / 判断 / 填空）。`,
+    `3. 结合电子教材例题与课文巩固后再提交自测。`,
     ``,
     `## 来源说明`,
-    `教材 PDF 来自开源仓库 [${book.sourceRepo}](${source})。课径提供目录导航、导学与练习，请遵守当地法律法规与版权要求合理使用。`,
+    `教材 PDF 来自开源仓库 [${book.sourceRepo}](${source})。题库依据 PDF 目录与人教版课标知识点原创编写，不照搬课文原文。`,
   ].join("\n");
+}
+
+function chapterGuide(topic: string, book: CatalogBook) {
+  return [
+    `## 章节练习：${topic}`,
+    `对应教材《${book.title}》。`,
+    ``,
+    `### 建议`,
+    `1. 先阅读教材中本单元/章节内容。`,
+    `2. 完成单选、判断、填空题。`,
+    `3. 错题记录到笔记本，回看教材例题。`,
+    ``,
+    book.githubUrl ? `电子教材：[打开 PDF](${book.githubUrl})` : "",
+  ].join("\n");
+}
+
+function questionCreates(questions: BankQuestion[]) {
+  return questions.map((q, i) => ({
+    type: q.type,
+    prompt: q.prompt,
+    options: q.options ? JSON.stringify(q.options) : q.type === "judge" ? JSON.stringify(["正确", "错误"]) : null,
+    answer: q.answer,
+    explanation: q.explanation,
+    sortOrder: i + 1,
+  }));
 }
 
 async function seedUsers() {
@@ -128,7 +134,10 @@ async function seedUsers() {
 }
 
 async function upsertSubjectTree(catalog: Catalog) {
-  const needed = new Map<string, { stage: "primary" | "middle"; grade: number; slug: string; name: string; sortOrder: number }>();
+  const needed = new Map<
+    string,
+    { stage: "primary" | "middle"; grade: number; slug: string; name: string; sortOrder: number }
+  >();
 
   for (const grade of PRIMARY_GRADES) {
     for (const subject of PRIMARY_SUBJECTS) {
@@ -154,8 +163,6 @@ async function upsertSubjectTree(catalog: Catalog) {
       });
     }
   }
-
-  // Ensure subjects that appear in catalog exist even if not in default lists
   for (const book of catalog.books) {
     const key = `${book.stage}:${book.grade}:${book.subjectSlug}`;
     if (!needed.has(key)) {
@@ -184,18 +191,37 @@ async function upsertSubjectTree(catalog: Catalog) {
   }
 }
 
+function splitQuestionsByTopic(topics: string[], questions: BankQuestion[]) {
+  const overview = questions.slice(0, 2);
+  const rest = questions.slice(2);
+  const perTopic = Math.max(2, Math.ceil(rest.length / Math.max(topics.length, 1)));
+  const chapters: { topic: string; questions: BankQuestion[] }[] = [];
+  let cursor = 0;
+  for (const topic of topics.slice(0, 8)) {
+    const chunk = rest.slice(cursor, cursor + perTopic);
+    cursor += perTopic;
+    if (chunk.length === 0) break;
+    chapters.push({ topic, questions: chunk });
+  }
+  if (cursor < rest.length && chapters.length) {
+    chapters[chapters.length - 1].questions.push(...rest.slice(cursor));
+  }
+  return { overview, chapters };
+}
+
 async function seedFromCatalog(catalog: Catalog) {
-  // Replace curriculum content while keeping users/progress cleaned via cascade on lessons
+  const topicsData = loadTopics();
+  const bank = loadBank();
+
   await prisma.progress.deleteMany();
   await prisma.question.deleteMany();
   await prisma.lesson.deleteMany();
   await prisma.unit.deleteMany();
 
-  for (const book of catalog.books) {
-    if (!subjectAllowed(book.stage, book.grade, book.subjectSlug)) {
-      // still import PE/science etc. that we allow via catalog
-    }
+  let lessonCount = 0;
+  let questionCount = 0;
 
+  for (const book of catalog.books) {
     const subject = await prisma.subject.findUnique({
       where: {
         stage_grade_slug: {
@@ -207,6 +233,7 @@ async function seedFromCatalog(catalog: Catalog) {
     });
     if (!subject) continue;
 
+    const key = `${book.stage}-${book.grade}-${book.subjectSlug}-${book.term}`;
     const unitTitle = `${book.termLabel} · ${book.edition}`;
     const sortOrder = book.term === "upper" ? 1 : book.term === "lower" ? 2 : 1;
 
@@ -218,32 +245,50 @@ async function seedFromCatalog(catalog: Catalog) {
       },
     });
 
-    const questions = practiceFor(book.subjectSlug, book.grade, book.termLabel);
+    const bankBook = bank.books[key];
+    const topics = topicsData.topics[key] || bankBook?.topics || [`${book.termLabel}综合`];
+    const allQuestions = bankBook?.questions || [];
+    const { overview, chapters } = splitQuestionsByTopic(topics, allQuestions);
 
     await prisma.lesson.create({
       data: {
         unitId: unit.id,
-        title: book.title,
-        summary: `人教/统编电子教材《${book.title}》，来源 ChinaTextbook。`,
+        title: `电子教材 · ${book.title}`,
+        summary: `打开 ChinaTextbook 中的《${book.title}》，并完成导读自测。`,
         guide: buildGuide(book, catalog.source),
         sourceUrl: book.githubUrl,
         sourceRawUrl: book.rawUrl,
         sourcePath: book.path,
         sourceRepo: book.sourceRepo,
         sortOrder: 1,
-        questions: {
-          create: questions.map((q, i) => ({
-            type: q.type,
-            prompt: q.prompt,
-            options: q.options ? JSON.stringify(q.options) : null,
-            answer: q.answer,
-            explanation: q.explanation,
-            sortOrder: i + 1,
-          })),
-        },
+        questions: { create: questionCreates(overview.length ? overview : allQuestions.slice(0, 3)) },
       },
     });
+    lessonCount += 1;
+    questionCount += overview.length || Math.min(3, allQuestions.length);
+
+    let chapterOrder = 2;
+    for (const chapter of chapters) {
+      await prisma.lesson.create({
+        data: {
+          unitId: unit.id,
+          title: chapter.topic,
+          summary: `《${book.title}》章节练习：${chapter.topic}`,
+          guide: chapterGuide(chapter.topic, book),
+          sourceUrl: book.githubUrl,
+          sourceRawUrl: book.rawUrl,
+          sourcePath: book.path,
+          sourceRepo: book.sourceRepo,
+          sortOrder: chapterOrder++,
+          questions: { create: questionCreates(chapter.questions) },
+        },
+      });
+      lessonCount += 1;
+      questionCount += chapter.questions.length;
+    }
   }
+
+  console.log(`Seeded lessons=${lessonCount}, questions≈${questionCount}`);
 }
 
 async function main() {
@@ -252,8 +297,11 @@ async function main() {
   await seedUsers();
   await upsertSubjectTree(catalog);
   await seedFromCatalog(catalog);
-  const counts = await prisma.lesson.count();
-  console.log(`Seed completed. Lessons: ${counts}`);
+  const [lessons, questions] = await Promise.all([
+    prisma.lesson.count(),
+    prisma.question.count(),
+  ]);
+  console.log(`Seed completed. Lessons: ${lessons}, Questions: ${questions}`);
 }
 
 main()
