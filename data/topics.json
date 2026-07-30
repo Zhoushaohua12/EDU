@@ -1,0 +1,1090 @@
+{
+  "source": "ChinaTextbook PDF TOC + 人教版课标章节",
+  "count": 146,
+  "topics": {
+    "primary-1-math-upper": [
+      "1～5的认识和加减法",
+      "6～10的认识和加减法",
+      "认识图形",
+      "分与合",
+      "11～20各数的认识",
+      "认识钟表",
+      "20以内的进位加法"
+    ],
+    "primary-1-math-lower": [
+      "20以内的退位减法",
+      "图形的拼组",
+      "100以内数的认识",
+      "认识人民币",
+      "100以内的加法和减法",
+      "认识时间",
+      "找规律"
+    ],
+    "primary-2-math-upper": [
+      "长度单位",
+      "100以内的加法和减法（二）",
+      "角的初步认识",
+      "表内乘法（一）",
+      "观察物体",
+      "表内乘法（二）",
+      "认识时间",
+      "数学广角"
+    ],
+    "primary-2-math-lower": [
+      "数据收集整理",
+      "表内除法（一）",
+      "图形的运动",
+      "表内除法（二）",
+      "混合运算",
+      "有余数的除法",
+      "万以内数的认识",
+      "克和千克",
+      "数学广角"
+    ],
+    "primary-3-math-upper": [
+      "时分秒",
+      "万以内的加法和减法",
+      "测量",
+      "倍的认识",
+      "多位数乘一位数",
+      "长方形和正方形",
+      "分数的初步认识",
+      "数字编码",
+      "数学广角"
+    ],
+    "primary-3-math-lower": [
+      "位置与方向",
+      "除数是一位数的除法",
+      "复式统计表",
+      "两位数乘两位数",
+      "面积",
+      "年岁月日",
+      "小数的初步认识",
+      "数学广角"
+    ],
+    "primary-4-math-upper": [
+      "大数的认识",
+      "公顷和平方千米",
+      "角的度量",
+      "三位数乘两位数",
+      "平行四边形和梯形",
+      "除数是两位数的除法",
+      "条形统计图",
+      "数学广角"
+    ],
+    "primary-4-math-lower": [
+      "四则运算",
+      "观察物体",
+      "运算定律",
+      "小数的意义和性质",
+      "三角形",
+      "小数的加法和减法",
+      "图形的运动",
+      "平均数与条形统计图",
+      "数学广角"
+    ],
+    "primary-5-math-upper": [
+      "小数乘法",
+      "位置",
+      "小数除法",
+      "可能性",
+      "简易方程",
+      "多边形的面积",
+      "数学广角"
+    ],
+    "primary-5-math-lower": [
+      "观察物体",
+      "因数与倍数",
+      "长方体和正方体",
+      "分数的意义和性质",
+      "图形的运动",
+      "分数的加法和减法",
+      "折线统计图",
+      "数学广角"
+    ],
+    "primary-6-math-upper": [
+      "分数乘法",
+      "位置与方向",
+      "分数除法",
+      "比",
+      "圆",
+      "百分数",
+      "扇形统计图",
+      "数学广角"
+    ],
+    "primary-6-math-lower": [
+      "负数",
+      "百分数（二）",
+      "圆柱与圆锥",
+      "比例",
+      "数学广角",
+      "整理和复习"
+    ],
+    "primary-1-chinese-upper": [
+      "第二节 数学 数学 语文 美术 语文",
+      "第四节 道德与法治 体育 体育 写字 音乐",
+      "第五节 体育 道德与法治 综合实践 班会",
+      "第六节 美术 阅读"
+    ],
+    "primary-1-chinese-lower": [
+      "识字与写字",
+      "课文阅读",
+      "口语交际",
+      "语文园地"
+    ],
+    "primary-2-chinese-upper": [
+      "识字",
+      "课文阅读",
+      "口语交际",
+      "写话",
+      "语文园地"
+    ],
+    "primary-2-chinese-lower": [
+      "识字",
+      "课文阅读",
+      "口语交际",
+      "写话",
+      "语文园地"
+    ],
+    "primary-3-chinese-upper": [
+      "阅读策略",
+      "习作入门",
+      "口语交际",
+      "语文园地"
+    ],
+    "primary-3-chinese-lower": [
+      "阅读理解",
+      "习作表达",
+      "口语交际",
+      "语文园地"
+    ],
+    "primary-4-chinese-upper": [
+      "阅读策略",
+      "习作观察",
+      "文言文启蒙",
+      "语文园地"
+    ],
+    "primary-4-chinese-lower": [
+      "阅读理解",
+      "习作写人记事",
+      "文言文阅读",
+      "语文园地"
+    ],
+    "primary-5-chinese-upper": [
+      "阅读思辨",
+      "习作描写",
+      "文言文与古诗",
+      "语文园地"
+    ],
+    "primary-5-chinese-lower": [
+      "阅读拓展",
+      "习作说明",
+      "文言文与古诗",
+      "语文园地"
+    ],
+    "primary-6-chinese-upper": [
+      "阅读方法",
+      "习作立意",
+      "文言文与古诗",
+      "语文园地"
+    ],
+    "primary-6-chinese-lower": [
+      "毕业复习",
+      "习作综合",
+      "古诗文复习",
+      "语文园地"
+    ],
+    "middle-7-math-upper": [
+      "第一章 有理数",
+      "第二章 整式的加减",
+      "第三章 一元一次方程",
+      "第四章 几何图形初步"
+    ],
+    "middle-7-math-lower": [
+      "相交线与平行线",
+      "实数",
+      "平面直角坐标系",
+      "二元一次方程组",
+      "不等式与不等式组",
+      "数据的收集、整理与描述"
+    ],
+    "middle-8-math-upper": [
+      "三角形",
+      "全等三角形",
+      "轴对称",
+      "整式的乘法与因式分解",
+      "分式"
+    ],
+    "middle-8-math-lower": [
+      "二次根式",
+      "勾股定理",
+      "平行四边形",
+      "一次函数",
+      "数据的分析"
+    ],
+    "middle-9-math-upper": [
+      "一元二次方程",
+      "二次函数",
+      "旋转",
+      "圆",
+      "概率初步"
+    ],
+    "middle-9-math-lower": [
+      "反比例函数",
+      "相似",
+      "锐角三角函数",
+      "投影与视图"
+    ],
+    "middle-7-chinese-upper": [
+      "四季美景",
+      "至爱亲情",
+      "学习生活",
+      "人生之舟",
+      "动物与人",
+      "想象之翼"
+    ],
+    "middle-7-chinese-lower": [
+      "名人故事",
+      "修身正己",
+      "家国情怀",
+      "中华美德",
+      "科幻探险",
+      "艺术之韵"
+    ],
+    "middle-8-chinese-upper": [
+      "变化的社会",
+      "生活记忆",
+      "山水名胜",
+      "情感哲思",
+      "文明印记",
+      "自然奥秘"
+    ],
+    "middle-8-chinese-lower": [
+      "民生关切",
+      "思想方法",
+      "说明文阅读",
+      "古诗文诵读",
+      "活动探究"
+    ],
+    "middle-9-chinese-upper": [
+      "现代诗与散文",
+      "小说阅读",
+      "议论文入门",
+      "古诗文阅读",
+      "名著导读"
+    ],
+    "middle-9-chinese-lower": [
+      "家国天下",
+      "人物画廊",
+      "舞台人生",
+      "古诗文综合",
+      "复习与表达"
+    ],
+    "middle-8-physics-upper": [
+      "第一章 机械运动",
+      "第1节 长度和时间的测量",
+      "第2节 运动的描述",
+      "第3节 运动的快慢",
+      "第4节 测量平均速度",
+      "第二章 声现象",
+      "第1节 声音的产生与传播",
+      "第2节 声音的特性",
+      "第3节 声的利用",
+      "第4节 噪声的危害和控制",
+      "第三章 物态变化",
+      "第1节 温度",
+      "第2节 熔化和凝固",
+      "第3节 汽化和液化",
+      "第4节 升华和凝华",
+      "第四章 光现象",
+      "第1节 光的直线传播",
+      "第2节 光的反射",
+      "第3节 平面镜成像",
+      "第4节 光的折射"
+    ],
+    "middle-8-physics-lower": [
+      "力",
+      "运动和力",
+      "压强",
+      "浮力",
+      "功和机械能",
+      "简单机械"
+    ],
+    "middle-9-physics-full": [
+      "压强与浮力复习",
+      "功和机械能",
+      "内能",
+      "电流和电路",
+      "电压电阻",
+      "欧姆定律",
+      "电功率",
+      "电与磁",
+      "信息的传递",
+      "能源与可持续发展"
+    ],
+    "middle-9-chemistry-upper": [
+      "第一单元 走进化学世界",
+      "第二单元 我们周围的空气",
+      "第三单元 物质构成的奥秘",
+      "第四单元 自然界的水",
+      "第五单元 化学方程式",
+      "第六单元 碳和碳的氧化物",
+      "第七单元 燃料及其利用",
+      "6 第一单元 走进化学世界",
+      "一、化学变化和物理变化"
+    ],
+    "middle-9-chemistry-lower": [
+      "金属和金属材料",
+      "溶液",
+      "酸和碱",
+      "盐 化肥",
+      "化学与生活"
+    ],
+    "middle-7-biology-upper": [
+      "第一单元 生物和生物圈",
+      "第二单元 生物体的结构层次",
+      "第三单元 生物圈中的绿色植物",
+      "第四章 绿色植物是生物圈中有机物的制造者",
+      "第五章 绿色植物与生物圈中的碳－氧平衡",
+      "第一节 光合作用吸收二氧化碳释放氧气",
+      "2 第一单元 生物和生物圈",
+      "第一节 生物的特征",
+      "3 第一章 认识生物",
+      "5 第一章 认识生物",
+      "第二节 调查周边环境中的生物",
+      "第一章 认识生物",
+      "第一节 生物与环境的关系",
+      "第二章 了解生物圈",
+      "第二节 生物与环境组成生态系统",
+      "第三节 生物圈是最大的生态系统",
+      "第一章 细胞是生命活动的基本单位",
+      "第三节 动物细胞",
+      "第四节 细胞的生活",
+      "第一节 细胞通过分裂产生新细胞"
+    ],
+    "middle-7-biology-lower": [
+      "生物圈中的人",
+      "动物的运动和行为",
+      "生物的生殖发育与遗传初步"
+    ],
+    "middle-8-biology-upper": [
+      "生物的生殖和发育",
+      "生物的遗传和变异",
+      "生命的起源和进化"
+    ],
+    "middle-8-biology-lower": [
+      "细菌和真菌",
+      "病毒",
+      "健康地生活",
+      "生物技术"
+    ],
+    "middle-7-history-upper": [
+      "史前时期",
+      "夏商周时期",
+      "秦汉时期",
+      "三国两晋南北朝时期"
+    ],
+    "middle-7-history-lower": [
+      "隋唐时期",
+      "宋元时期",
+      "明清时期（至鸦片战争前）"
+    ],
+    "middle-8-history-upper": [
+      "中国近代史开端",
+      "辛亥革命",
+      "新民主主义革命兴起",
+      "中华人民共和国成立与社会主义建设"
+    ],
+    "middle-8-history-lower": [
+      "改革开放",
+      "民族团结与祖国统一",
+      "国防外交",
+      "科技文化成就"
+    ],
+    "middle-9-history-upper": [
+      "古代亚非文明",
+      "古代欧洲文明",
+      "近代早期的欧洲与世界"
+    ],
+    "middle-9-history-lower": [
+      "两次世界大战",
+      "冷战与当代世界",
+      "现代科技与文化"
+    ],
+    "middle-7-geography-upper": [
+      "第三节 人类的聚居地——聚落",
+      "第一节 地球和地球仪",
+      "第一章 地球和地图",
+      "第二节 地球的运动",
+      "第三节 地图的阅读",
+      "第四节 地形图的判读",
+      "第一节 大洲和大洋",
+      "第二章 陆地和海洋",
+      "第二节 海陆的变迁",
+      "第三章 天气与气候",
+      "第一节 多变的天气",
+      "第二节 气温的变化与分布",
+      "第三节 降水的变化与分布",
+      "第四节 世界的气候",
+      "第四章 居民与聚落",
+      "第一节 人口与人种",
+      "第二节 世界的语言和宗教",
+      "第五章 发展与合作"
+    ],
+    "middle-7-geography-lower": [
+      "亚洲",
+      "非洲",
+      "欧洲",
+      "美洲",
+      "大洋洲",
+      "极地地区"
+    ],
+    "middle-8-geography-upper": [
+      "从世界看中国",
+      "中国的自然环境",
+      "中国的自然资源",
+      "中国的经济发展"
+    ],
+    "middle-8-geography-lower": [
+      "中国的地理差异",
+      "认识某一区域",
+      "面向未来的可持续发展"
+    ],
+    "primary-3-english-upper": [
+      "Unit 1 Hello!",
+      "Unit 2 Colours",
+      "Unit 3 Look at me!",
+      "Unit 4 We love animals",
+      "Unit 5 Let’s eat!",
+      "Unit 6 Happy birthday!",
+      "Unit"
+    ],
+    "primary-3-english-lower": [
+      "Welcome back!",
+      "My family",
+      "My friends",
+      "My home",
+      "Dinner’s ready",
+      "Meet my family"
+    ],
+    "primary-4-english-upper": [
+      "My classroom",
+      "My schoolbag",
+      "My friends",
+      "My home",
+      "Dinner’s ready",
+      "Meet my family!"
+    ],
+    "primary-4-english-lower": [
+      "Our school",
+      "What time is it?",
+      "Weather",
+      "At the farm",
+      "My clothes",
+      "Shopping"
+    ],
+    "primary-5-english-upper": [
+      "What’s he like?",
+      "My week",
+      "What would you like?",
+      "What can you do?",
+      "There is a big bed",
+      "In a nature park"
+    ],
+    "primary-5-english-lower": [
+      "My day",
+      "My favourite season",
+      "My school calendar",
+      "When is Easter?",
+      "Whose dog is it?",
+      "Work quietly!"
+    ],
+    "primary-6-english-upper": [
+      "How can I get there?",
+      "Ways to go to school",
+      "My weekend plan",
+      "I have a pen pal",
+      "What does he do?",
+      "How do you feel?"
+    ],
+    "primary-6-english-lower": [
+      "How tall are you?",
+      "Last weekend",
+      "Where did you go?",
+      "Then and now",
+      "复习 Recycle"
+    ],
+    "primary-1-english-upper": [
+      "Hello",
+      "Numbers",
+      "Colours",
+      "Animals",
+      "School things"
+    ],
+    "primary-1-english-lower": [
+      "Family",
+      "Food",
+      "Body",
+      "Toys",
+      "My classroom"
+    ],
+    "primary-2-english-upper": [
+      "Greetings",
+      "My body",
+      "Clothes",
+      "Food",
+      "Animals"
+    ],
+    "primary-2-english-lower": [
+      "My home",
+      "My school",
+      "Weather",
+      "Days",
+      "Review"
+    ],
+    "middle-7-english-upper": [
+      "My name is Gina",
+      "This is my sister",
+      "Is this your pencil",
+      "Where’s my schoolbag",
+      "Do you have a soccer ball",
+      "Do you like bananas",
+      "How much are these socks",
+      "When is your birthday",
+      "My favorite subject is science"
+    ],
+    "middle-7-english-lower": [
+      "Can you play the guitar",
+      "What time do you go to school",
+      "How do you get to school",
+      "Don’t eat in class",
+      "Why do you like pandas",
+      "I’m watching TV",
+      "It’s raining",
+      "Is there a post office near here",
+      "What does he look like",
+      "I’d like some noodles",
+      "How was your school trip",
+      "What did you do last weekend"
+    ],
+    "middle-8-english-upper": [
+      "Where did you go on vacation",
+      "How often do you exercise",
+      "I’m more outgoing than my sister",
+      "What’s the best movie theater",
+      "Do you want to watch a game show",
+      "I’m going to study computer science",
+      "Will people have robots",
+      "How do you make a banana milk shake",
+      "Can you come to my party",
+      "If you go to the party"
+    ],
+    "middle-8-english-lower": [
+      "What’s the matter",
+      "I’ll help to clean up the city parks",
+      "Could you please clean your room",
+      "Why don’t you talk to your parents",
+      "What were you doing when the rainstorm came",
+      "An old man tried to move the mountains",
+      "What’s the highest mountain in the world",
+      "Have you read Treasure Island yet",
+      "Have you ever been to a museum",
+      "I’ve had this bike for three years"
+    ],
+    "middle-9-english-full": [
+      "How can we become good learners",
+      "I think that mooncakes are delicious",
+      "It must belong to Carla",
+      "I used to be afraid of the dark",
+      "What are the shirts made of",
+      "When was it invented",
+      "Teenagers should be allowed to choose their own clothes",
+      "It is important to have good friends",
+      "I like music that I can dance to",
+      "You’re supposed to shake hands",
+      "Sad movies make me cry",
+      "Life is full of the unexpected",
+      "We’re trying to save the earth",
+      "I remember meeting all of you in Grade 7"
+    ],
+    "middle-7-art-lower": [
+      "造型表现",
+      "设计应用",
+      "欣赏评述",
+      "综合探索"
+    ],
+    "middle-7-art-upper": [
+      "造型表现",
+      "设计应用",
+      "欣赏评述",
+      "综合探索"
+    ],
+    "middle-7-morality-lower": [
+      "成长的节拍",
+      "友谊的天空",
+      "师长情谊",
+      "生命的思考",
+      "法律伴我行",
+      "责任与担当"
+    ],
+    "middle-7-morality-upper": [
+      "成长的节拍",
+      "友谊的天空",
+      "师长情谊",
+      "生命的思考",
+      "法律伴我行",
+      "责任与担当"
+    ],
+    "middle-7-music-lower": [
+      "歌唱",
+      "欣赏",
+      "乐理基础",
+      "创作实践"
+    ],
+    "middle-7-music-upper": [
+      "歌唱",
+      "欣赏",
+      "乐理基础",
+      "创作实践"
+    ],
+    "middle-7-pe-full": [
+      "田径",
+      "球类",
+      "体操",
+      "健康与安全"
+    ],
+    "middle-8-art-lower": [
+      "造型表现",
+      "设计应用",
+      "欣赏评述",
+      "综合探索"
+    ],
+    "middle-8-art-upper": [
+      "造型表现",
+      "设计应用",
+      "欣赏评述",
+      "综合探索"
+    ],
+    "middle-8-morality-lower": [
+      "成长的节拍",
+      "友谊的天空",
+      "师长情谊",
+      "生命的思考",
+      "法律伴我行",
+      "责任与担当"
+    ],
+    "middle-8-morality-upper": [
+      "成长的节拍",
+      "友谊的天空",
+      "师长情谊",
+      "生命的思考",
+      "法律伴我行",
+      "责任与担当"
+    ],
+    "middle-8-music-lower": [
+      "歌唱",
+      "欣赏",
+      "乐理基础",
+      "创作实践"
+    ],
+    "middle-8-music-upper": [
+      "歌唱",
+      "欣赏",
+      "乐理基础",
+      "创作实践"
+    ],
+    "middle-8-pe-full": [
+      "田径",
+      "球类",
+      "体操",
+      "健康与安全"
+    ],
+    "middle-9-art-lower": [
+      "造型表现",
+      "设计应用",
+      "欣赏评述",
+      "综合探索"
+    ],
+    "middle-9-art-upper": [
+      "造型表现",
+      "设计应用",
+      "欣赏评述",
+      "综合探索"
+    ],
+    "middle-9-morality-lower": [
+      "成长的节拍",
+      "友谊的天空",
+      "师长情谊",
+      "生命的思考",
+      "法律伴我行",
+      "责任与担当"
+    ],
+    "middle-9-morality-upper": [
+      "成长的节拍",
+      "友谊的天空",
+      "师长情谊",
+      "生命的思考",
+      "法律伴我行",
+      "责任与担当"
+    ],
+    "middle-9-music-lower": [
+      "歌唱",
+      "欣赏",
+      "乐理基础",
+      "创作实践"
+    ],
+    "middle-9-music-upper": [
+      "歌唱",
+      "欣赏",
+      "乐理基础",
+      "创作实践"
+    ],
+    "middle-9-pe-full": [
+      "田径",
+      "球类",
+      "体操",
+      "健康与安全"
+    ],
+    "primary-1-art-lower": [
+      "造型表现",
+      "设计应用",
+      "欣赏评述",
+      "综合探索"
+    ],
+    "primary-1-art-upper": [
+      "造型表现",
+      "设计应用",
+      "欣赏评述",
+      "综合探索"
+    ],
+    "primary-1-morality-lower": [
+      "认识自我",
+      "家庭与学校",
+      "规则与秩序",
+      "自然与生命",
+      "家乡与祖国"
+    ],
+    "primary-1-morality-upper": [
+      "认识自我",
+      "家庭与学校",
+      "规则与秩序",
+      "自然与生命",
+      "家乡与祖国"
+    ],
+    "primary-1-music-lower": [
+      "演唱",
+      "聆听",
+      "知识与技能",
+      "编创活动"
+    ],
+    "primary-1-music-upper": [
+      "演唱",
+      "聆听",
+      "知识与技能",
+      "编创活动"
+    ],
+    "primary-1-pe-full": [
+      "基本活动",
+      "球类游戏",
+      "体操与技巧",
+      "健康知识"
+    ],
+    "primary-1-science-lower": [
+      "观察与实验",
+      "植物与动物",
+      "材料与物体",
+      "天气与季节",
+      "力与运动初步"
+    ],
+    "primary-1-science-upper": [
+      "观察与实验",
+      "植物与动物",
+      "材料与物体",
+      "天气与季节",
+      "力与运动初步"
+    ],
+    "primary-2-art-lower": [
+      "造型表现",
+      "设计应用",
+      "欣赏评述",
+      "综合探索"
+    ],
+    "primary-2-art-upper": [
+      "造型表现",
+      "设计应用",
+      "欣赏评述",
+      "综合探索"
+    ],
+    "primary-2-morality-lower": [
+      "认识自我",
+      "家庭与学校",
+      "规则与秩序",
+      "自然与生命",
+      "家乡与祖国"
+    ],
+    "primary-2-morality-upper": [
+      "认识自我",
+      "家庭与学校",
+      "规则与秩序",
+      "自然与生命",
+      "家乡与祖国"
+    ],
+    "primary-2-music-lower": [
+      "演唱",
+      "聆听",
+      "知识与技能",
+      "编创活动"
+    ],
+    "primary-2-music-upper": [
+      "演唱",
+      "聆听",
+      "知识与技能",
+      "编创活动"
+    ],
+    "primary-2-pe-full": [
+      "基本活动",
+      "球类游戏",
+      "体操与技巧",
+      "健康知识"
+    ],
+    "primary-2-science-lower": [
+      "观察与实验",
+      "植物与动物",
+      "材料与物体",
+      "天气与季节",
+      "力与运动初步"
+    ],
+    "primary-2-science-upper": [
+      "观察与实验",
+      "植物与动物",
+      "材料与物体",
+      "天气与季节",
+      "力与运动初步"
+    ],
+    "primary-3-art-lower": [
+      "造型表现",
+      "设计应用",
+      "欣赏评述",
+      "综合探索"
+    ],
+    "primary-3-art-upper": [
+      "造型表现",
+      "设计应用",
+      "欣赏评述",
+      "综合探索"
+    ],
+    "primary-3-morality-lower": [
+      "认识自我",
+      "家庭与学校",
+      "规则与秩序",
+      "自然与生命",
+      "家乡与祖国"
+    ],
+    "primary-3-morality-upper": [
+      "认识自我",
+      "家庭与学校",
+      "规则与秩序",
+      "自然与生命",
+      "家乡与祖国"
+    ],
+    "primary-3-music-lower": [
+      "演唱",
+      "聆听",
+      "知识与技能",
+      "编创活动"
+    ],
+    "primary-3-music-upper": [
+      "演唱",
+      "聆听",
+      "知识与技能",
+      "编创活动"
+    ],
+    "primary-3-pe-full": [
+      "基本活动",
+      "球类游戏",
+      "体操与技巧",
+      "健康知识"
+    ],
+    "primary-3-science-lower": [
+      "观察与实验",
+      "植物与动物",
+      "材料与物体",
+      "天气与季节",
+      "力与运动初步"
+    ],
+    "primary-3-science-upper": [
+      "观察与实验",
+      "植物与动物",
+      "材料与物体",
+      "天气与季节",
+      "力与运动初步"
+    ],
+    "primary-4-art-lower": [
+      "造型表现",
+      "设计应用",
+      "欣赏评述",
+      "综合探索"
+    ],
+    "primary-4-art-upper": [
+      "造型表现",
+      "设计应用",
+      "欣赏评述",
+      "综合探索"
+    ],
+    "primary-4-morality-lower": [
+      "认识自我",
+      "家庭与学校",
+      "规则与秩序",
+      "自然与生命",
+      "家乡与祖国"
+    ],
+    "primary-4-morality-upper": [
+      "认识自我",
+      "家庭与学校",
+      "规则与秩序",
+      "自然与生命",
+      "家乡与祖国"
+    ],
+    "primary-4-music-lower": [
+      "演唱",
+      "聆听",
+      "知识与技能",
+      "编创活动"
+    ],
+    "primary-4-music-upper": [
+      "演唱",
+      "聆听",
+      "知识与技能",
+      "编创活动"
+    ],
+    "primary-4-pe-full": [
+      "基本活动",
+      "球类游戏",
+      "体操与技巧",
+      "健康知识"
+    ],
+    "primary-4-science-lower": [
+      "观察与实验",
+      "植物与动物",
+      "材料与物体",
+      "天气与季节",
+      "力与运动初步"
+    ],
+    "primary-4-science-upper": [
+      "观察与实验",
+      "植物与动物",
+      "材料与物体",
+      "天气与季节",
+      "力与运动初步"
+    ],
+    "primary-5-art-lower": [
+      "造型表现",
+      "设计应用",
+      "欣赏评述",
+      "综合探索"
+    ],
+    "primary-5-art-upper": [
+      "造型表现",
+      "设计应用",
+      "欣赏评述",
+      "综合探索"
+    ],
+    "primary-5-morality-lower": [
+      "认识自我",
+      "家庭与学校",
+      "规则与秩序",
+      "自然与生命",
+      "家乡与祖国"
+    ],
+    "primary-5-morality-upper": [
+      "认识自我",
+      "家庭与学校",
+      "规则与秩序",
+      "自然与生命",
+      "家乡与祖国"
+    ],
+    "primary-5-music-lower": [
+      "演唱",
+      "聆听",
+      "知识与技能",
+      "编创活动"
+    ],
+    "primary-5-music-upper": [
+      "演唱",
+      "聆听",
+      "知识与技能",
+      "编创活动"
+    ],
+    "primary-5-pe-full": [
+      "基本活动",
+      "球类游戏",
+      "体操与技巧",
+      "健康知识"
+    ],
+    "primary-5-science-lower": [
+      "观察与实验",
+      "植物与动物",
+      "材料与物体",
+      "天气与季节",
+      "力与运动初步"
+    ],
+    "primary-6-art-lower": [
+      "造型表现",
+      "设计应用",
+      "欣赏评述",
+      "综合探索"
+    ],
+    "primary-6-art-upper": [
+      "造型表现",
+      "设计应用",
+      "欣赏评述",
+      "综合探索"
+    ],
+    "primary-6-morality-lower": [
+      "认识自我",
+      "家庭与学校",
+      "规则与秩序",
+      "自然与生命",
+      "家乡与祖国"
+    ],
+    "primary-6-morality-upper": [
+      "认识自我",
+      "家庭与学校",
+      "规则与秩序",
+      "自然与生命",
+      "家乡与祖国"
+    ],
+    "primary-6-music-lower": [
+      "演唱",
+      "聆听",
+      "知识与技能",
+      "编创活动"
+    ],
+    "primary-6-music-upper": [
+      "演唱",
+      "聆听",
+      "知识与技能",
+      "编创活动"
+    ],
+    "primary-6-pe-full": [
+      "基本活动",
+      "球类游戏",
+      "体操与技巧",
+      "健康知识"
+    ],
+    "primary-6-science-lower": [
+      "观察与实验",
+      "植物与动物",
+      "材料与物体",
+      "天气与季节",
+      "力与运动初步"
+    ],
+    "primary-6-science-upper": [
+      "观察与实验",
+      "植物与动物",
+      "材料与物体",
+      "天气与季节",
+      "力与运动初步"
+    ]
+  }
+}

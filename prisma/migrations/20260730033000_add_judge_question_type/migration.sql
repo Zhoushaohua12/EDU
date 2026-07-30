@@ -1,0 +1,1 @@
+-- QuestionType enum extended with judge (SQLite stores enum as TEXT; no table rewrite required).
