@@ -18,7 +18,7 @@ export default async function MiddlePage() {
         </div>
         <h1 className="section__title">初中 · 人教版</h1>
         <p className="section__desc">
-          覆盖语数英及物理、化学、历史、地理、道德与法治等科目入口。
+          覆盖语数英物化生史地道法及音体美等科目，PDF 链接至 ChinaTextbook。
         </p>
 
         {MIDDLE_GRADES.map((grade) => {

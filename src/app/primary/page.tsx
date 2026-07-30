@@ -17,7 +17,9 @@ export default async function PrimaryPage() {
           <span>小学</span>
         </div>
         <h1 className="section__title">小学 · 人教版</h1>
-        <p className="section__desc">选择年级，进入语文、数学、英语同步学习。</p>
+        <p className="section__desc">
+          选择年级进入科目。电子教材 PDF 来自 ChinaTextbook 人教/统编目录。
+        </p>
 
         {PRIMARY_GRADES.map((grade) => {
           const gradeSubjects = subjects.filter((s) => s.grade === grade);
